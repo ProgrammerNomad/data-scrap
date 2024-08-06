@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Data Scanner</title>
+</head>
+<body>
+  <h1>Data Scanner</h1>
+  <button id="startButton">Start Scan</button>
+  <button id="stopButton" disabled>Stop Scan</button> 
+  <script>
+    document.getElementById('startButton').addEventListener('click', () => {
+      chrome.runtime.sendMessage({ action: 'scan' });
+      chrome.runtime.sendMessage({ action: 'updateUI', status: 'started' });
+    });
+
+    document.getElementById('stopButton').addEventListener('click', () => {
+      chrome.runtime.sendMessage({ action: 'stop' });
+      chrome.runtime.sendMessage({ action: 'updateUI', status: 'stopped' });
+    });
+  </script>
+</body>
+</html>
