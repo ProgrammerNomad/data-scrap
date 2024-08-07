@@ -6,8 +6,8 @@
   "permissions": [
     "activeTab",
     "storage",
-    "http://your-api-endpoint.com/*", 
-    "https://your-api-endpoint.com/*"
+    "https://api.builtwith.com/lists11/*", 
+    "https://api.builtwith.com/lists11/*"
   ],
   "background": {
     "service_worker": "background.js"

@@ -7,7 +7,7 @@ let scanRunning = false;
 // Function to fetch data from the first API
 async function fetchDataFromAPI1() {
   try {
-    const response = await fetch('http://your-api-endpoint.com/data'); // Replace with your API endpoint
+    const response = await fetch('https://api.builtwith.com/lists11/data'); // Replace with your API endpoint
     const data = await response.json();
     return data;
   } catch (error) {
@@ -19,7 +19,7 @@ async function fetchDataFromAPI1() {
 // Function to post data to the second API
 async function postDataToAPI2(data) {
   try {
-    const response = await fetch('https://your-api-endpoint.com/submit', {
+    const response = await fetch('https://api.builtwith.com/lists11/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
